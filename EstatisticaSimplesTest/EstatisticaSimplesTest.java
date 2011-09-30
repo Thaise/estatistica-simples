@@ -40,23 +40,24 @@ public class EstatisticaSimplesTest{
 	}
 	
 	@Test
-	public void deveCalcularValorMaximoEntreValores() {
+	public void deveCalcularValorMaximoEntreTresValores() {
 		double valoresDeEntrada[] =  {6,5,7};
 		double valorMinimoCalculado = EstatisticasSimples.calculaValorMaximo(valoresDeEntrada);
 		assertEquals(7, valorMinimoCalculado, 0);
 	}
 	
-	@Test
-	public void deveCalcularValorMaximoEntreQuatroValores() {
-		double valoresDeEntrada[] =  {6,5,7};
-		double valorMaximoCalculado = EstatisticasSimples.calculaValorMaximo(valoresDeEntrada);
-		assertEquals(7, valorMaximoCalculado, 0);
-	}
 	
 	@Test
 	public void deveCalcularValorMinimoEntreQuatroValores() {
-		double valoresDeEntrada[] =  {5,1,9};
+		double valoresDeEntrada[] =  {5,1,9,8};
 		double valorMinimoCalculado = EstatisticasSimples.calculaValorMinimo(valoresDeEntrada);
 		assertEquals(1, valorMinimoCalculado, 0);
+	}
+	
+	@Test
+	public void deveCalcularValorQuantidadeDeValores2() {
+		double valoresDeEntrada[] =  {5,1,9,8};
+		double valorMinimoCalculado = EstatisticasSimples.calculaQuantidade(valoresDeEntrada);
+		assertEquals(4, valorMinimoCalculado, 0);
 	}
 }
